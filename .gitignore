@@ -1,0 +1,29 @@
+cd "ICP Ticket System/ICP Ticket System"
+git init
+
+cat > .gitignore << 'EOF'
+# Node / Vite
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+**/.vite/
+*.log
+
+# DFX generated
+.dfx/
+
+# OS/editor
+.DS_Store
+.idea/
+*.swp
+
+# Binaries
+*.wasm
+
+# Media (keep large files out of Git)
+*.mp4
+EOF
+
+git add .gitignore
+git commit -m "chore: add .gitignore"
